@@ -33,9 +33,9 @@ md-to-pdf/
 │   ├── check_env.sh      # Verify dependencies
 │   ├── install_offline.sh # Install from local packages
 │   └── md2pdf.sh         # Convert MD to PDF
-├── packages/
-│   ├── pandoc/           # Pandoc offline package
-│   └── wkhtmltopdf/      # wkhtmltopdf + libssl
+├── packages/             # 离线 .deb（未纳入仓库，见 references/install.md）
+│   ├── pandoc/           #   Pandoc offline package
+│   └── wkhtmltopdf/      #   wkhtmltopdf + libssl
 └── references/
     ├── install.md        # Detailed setup guide
     ├── conversion.md     # Conversion usage

@@ -34,3 +34,7 @@ Thumbs.db
 PDR.md
 SPEC.md
 SKILLS整理.md
+
+# 大体积预构建二进制依赖包（md-to-pdf 离线 .deb，约 50MB）
+# 本地离线安装时把 .deb 放回 skills/md-to-pdf/packages/ 即可；仓库走 apt 联网安装
+skills/md-to-pdf/packages/
