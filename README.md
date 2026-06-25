@@ -89,7 +89,6 @@ openclaw skill install comfyui-image-generation
 - **VitePress** — 静态站点生成
 - **Node.js + TypeScript(.mjs)** — 构建脚本
 - **ajv + ajv-formats** — JSON Schema 校验
-- **gray-matter** — 读取 SKILL.md frontmatter
 - **Vue 3 组件** — 卡片墙 / 搜索（300ms 防抖）/ 多维筛选 / 详情页
 
 静态产物可部署到任意静态托管（GitLab Pages / GitHub Pages / 对象存储）。仓库已附 GitHub Actions 流水线（`.github/workflows/`）做校验与构建；如需 GitLab Pages，按 `.gitlab-ci.yml` 形式自行配置。
