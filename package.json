@@ -1,0 +1,19 @@
+{
+  "name": "openclaw-skill-market",
+  "version": "1.0.0",
+  "description": "面向 OpenClaw 用户的精选技能市场（Git 仓库 + 静态目录站）",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "node scripts/build.mjs && vitepress build docs",
+    "validate": "node scripts/validate.mjs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "gray-matter": "^4.0.3",
+    "vitepress": "^1.5.0"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SkillRecord",
+  "description": "单个技能的结构化元数据（对齐 SPEC 第 3 章，权威源）",
+  "type": "object",
+  "required": [
+    "id", "name", "display_name", "description", "version", "icon",
+    "category", "runtime_type", "owner", "readme", "files",
+    "platform", "changelog", "created_at", "updated_at"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z]+/[a-z0-9-]+$", "description": "{owner}/{name}" },
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "kebab-case，与目录名一致" },
+    "display_name": { "type": "string" },
+    "description": { "type": "string", "description": "一句话作用 + 触发条件" },
+    "description_en": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "语义化版本" },
+    "icon": { "type": "string", "description": "emoji" },
+    "category": {
+      "type": "string",
+      "enum": ["document", "image_video", "mail_communication", "initialization", "system_config", "code_debug"]
+    },
+    "runtime_type": {
+      "type": "string",
+      "enum": ["external_api", "gateway_migrated_api", "local"]
+    },
+    "owner": {
+      "type": "object",
+      "required": ["name", "type", "verified"],
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["official", "migrated"] },
+        "verified": { "type": "boolean" },
+        "avatar": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    },
+    "readme": { "type": "string", "description": "引用 SKILL.md 路径或内联 markdown" },
+    "files": { "type": "array", "items": { "type": "string" } },
+    "env_vars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "description", "required", "source", "example"],
+        "properties": {
+          "key": { "type": "string" },
+          "description": { "type": "string" },
+          "required": { "type": "boolean" },
+          "source": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "min_version", "type"],
+        "properties": {
+          "name": { "type": "string" },
+          "min_version": { "type": "string" },
+          "type": { "type": "string", "enum": ["runtime", "tool", "system"] }
+        }
+      }
+    },
+    "api": {
+      "type": "object",
+      "required": ["base_url", "auth_type", "endpoints", "rate_limit", "timeout_sec"],
+      "properties": {
+        "base_url": { "type": "string" },
+        "auth_type": { "type": "string", "enum": ["gateway", "gateway_plus_backend"] },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["method", "path", "desc"],
+            "properties": {
+              "method": { "type": "string" },
+              "path": { "type": "string" },
+              "desc": { "type": "string" }
+            }
+          }
+        },
+        "rate_limit": { "type": "string" },
+        "timeout_sec": { "type": "number" }
+      }
+    },
+    "migration": {
+      "type": "object",
+      "required": ["migrated_from", "migrated_to", "behavior_change", "status"],
+      "properties": {
+        "migrated_from": { "type": "string" },
+        "migrated_to": { "type": "string" },
+        "behavior_change": { "type": "string" },
+        "status": { "type": "string", "enum": ["verified", "pending"] }
+      }
+    },
+    "platform": {
+      "type": "object",
+      "required": ["host", "capabilities"],
+      "properties": {
+        "host": { "type": "string", "const": "openclaw" },
+        "min_version": { "type": "string" },
+        "capabilities": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "install_count": { "type": "number" },
+    "hot": { "type": "boolean" },
+    "examples": { "type": "array", "items": { "type": "string" } },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "changes", "type"],
+        "properties": {
+          "version": { "type": "string" },
+          "date": { "type": "string" },
+          "changes": { "type": "array", "items": { "type": "string" } },
+          "type": { "type": "string", "enum": ["MAJOR", "MINOR", "PATCH"] }
+        }
+      }
+    },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" }
+  }
+}

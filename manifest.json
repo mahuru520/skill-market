@@ -1,0 +1,37 @@
+{
+  "name": "openclaw-skill-market",
+  "owner": {
+    "name": "维护者",
+    "email": "maintainer@example.com",
+    "url": "https://github.com/owner/skill-market"
+  },
+  "version": "1.0.0",
+  "updated_at": "2026-06-25T00:00:00Z",
+  "skills": [
+    { "id": "official/comfyui-image-generation", "name": "comfyui-image-generation", "source": "./skills/comfyui-image-generation", "version": "2.0.0" },
+    { "id": "official/comfyui-video-generation", "name": "comfyui-video-generation", "source": "./skills/comfyui-video-generation", "version": "2.0.0" },
+    { "id": "official/contract-review", "name": "contract-review", "source": "./skills/contract-review", "version": "2.0.0" },
+    { "id": "official/invoice-ocr", "name": "invoice-ocr", "source": "./skills/invoice-ocr", "version": "2.0.0" },
+    { "id": "official/ragflow-knowledge-qa", "name": "ragflow-knowledge-qa", "source": "./skills/ragflow-knowledge-qa", "version": "2.0.0" },
+    { "id": "official/list-models", "name": "list-models", "source": "./skills/list-models", "version": "1.0.0" },
+    { "id": "official/mail", "name": "mail", "source": "./skills/mail", "version": "1.0.0" },
+    { "id": "official/vision-ocr", "name": "vision-ocr", "source": "./skills/vision-ocr", "version": "1.0.0" },
+    { "id": "official/whisper-transcribe", "name": "whisper-transcribe", "source": "./skills/whisper-transcribe", "version": "1.0.0" },
+    { "id": "official/md-to-pdf", "name": "md-to-pdf", "source": "./skills/md-to-pdf", "version": "1.0.0" },
+    { "id": "official/minimax-docx", "name": "minimax-docx", "source": "./skills/minimax-docx", "version": "1.0.0" },
+    { "id": "official/minimax-pdf", "name": "minimax-pdf", "source": "./skills/minimax-pdf", "version": "1.0.0" },
+    { "id": "official/minimax-xlsx", "name": "minimax-xlsx", "source": "./skills/minimax-xlsx", "version": "1.0.0" },
+    { "id": "official/model-price-updater", "name": "model-price-updater", "source": "./skills/model-price-updater", "version": "1.0.0" },
+    { "id": "official/openclaw-dingtalk-channel", "name": "openclaw-dingtalk-channel", "source": "./skills/openclaw-dingtalk-channel", "version": "1.0.0" },
+    { "id": "official/openclaw-feishu-plugin", "name": "openclaw-feishu-plugin", "source": "./skills/openclaw-feishu-plugin", "version": "1.0.0" },
+    { "id": "official/openclaw-qq-channel", "name": "openclaw-qq-channel", "source": "./skills/openclaw-qq-channel", "version": "1.0.0" },
+    { "id": "official/openclaw-ui-customization", "name": "openclaw-ui-customization", "source": "./skills/openclaw-ui-customization", "version": "1.0.0" },
+    { "id": "official/openclaw-wecom-channel", "name": "openclaw-wecom-channel", "source": "./skills/openclaw-wecom-channel", "version": "1.0.0" },
+    { "id": "official/pptx-generator", "name": "pptx-generator", "source": "./skills/pptx-generator", "version": "1.0.0" },
+    { "id": "official/problem-solving-debug", "name": "problem-solving-debug", "source": "./skills/problem-solving-debug", "version": "1.0.0" },
+    { "id": "official/self-improving-agent", "name": "self-improving-agent", "source": "./skills/self-improving-agent", "version": "1.0.0" },
+    { "id": "official/skill-expansion", "name": "skill-expansion", "source": "./skills/skill-expansion", "version": "1.0.0" },
+    { "id": "official/user-initialization", "name": "user-initialization", "source": "./skills/user-initialization", "version": "1.0.0" },
+    { "id": "official/workdir-initialization", "name": "workdir-initialization", "source": "./skills/workdir-initialization", "version": "1.0.0" }
+  ]
+}

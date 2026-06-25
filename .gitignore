@@ -1,0 +1,36 @@
+# AI 工具本地配置
+.claude/settings.local.json
+.cursor/
+.aider*
+.continue/
+.cody/
+
+# 密钥和凭证
+*.pem
+*.key
+credentials.json
+.npmrc
+.aws/
+.ssh/
+
+# Dependencies
+node_modules/
+
+# Build artifacts（构建产物，CI 重新生成）
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/public/api/
+
+# Environment（含真实 token，禁止提交）
+.env
+.env.local
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+*.log
+
+PDR.md
+SPEC.md
+SKILLS整理.md
