@@ -14,7 +14,8 @@ const filters = ref({ owner: "", runtime_type: "", category: "" });
 onMounted(async () => {
   try {
     // fetch 静态 JSON 资源（对应 SPEC 第 4 章 GET /api/skills.json）
-    const res = await fetch("/api/skills.json");
+    // import.meta.env.BASE_URL 适配 GitHub Pages 子路径部署（base: "/skill-market/"）
+    const res = await fetch(`${import.meta.env.BASE_URL}api/skills.json`);
     skills.value = await res.json();
   } catch (e) {
     error.value = "加载技能列表失败：" + e.message + "（请先运行 npm run build）";

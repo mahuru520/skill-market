@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  // GitHub Pages 子路径部署：https://mahuru520.github.io/skill-market/
+  base: "/skill-market/",
   title: "OspreyClaw Skill Market",
   description: "面向 OspreyClaw 用户的精选技能市场",
   lang: "zh-CN",
