@@ -27,7 +27,7 @@
 
 ```bash
 # 需 Node.js ≥ 18
-npm install          # 安装依赖（VitePress / ajv / gray-matter）
+npm install          # 安装依赖（VitePress / ajv / ajv-formats）
 npm run validate     # 校验 manifest + 25 个 skill.json（schema + 目录一致性）
 npm run build        # 生成静态 API（docs/public/api/*.json）+ 25 个详情页 + 站点
 npm run dev          # 本地预览 http://localhost:5173
@@ -91,7 +91,7 @@ openclaw skill install comfyui-image-generation
 - **ajv + ajv-formats** — JSON Schema 校验
 - **Vue 3 组件** — 卡片墙 / 搜索（300ms 防抖）/ 多维筛选 / 详情页
 
-静态产物可部署到任意静态托管（GitLab Pages / GitHub Pages / 对象存储）。仓库已附 GitHub Actions 流水线（`.github/workflows/`）做校验与构建；如需 GitLab Pages，按 `.gitlab-ci.yml` 形式自行配置。
+静态产物可部署到任意静态托管（GitHub Pages / GitLab Pages / 对象存储）。仓库已附 GitHub Actions 流水线（`.github/workflows/`）做校验、构建并部署到 GitHub Pages；如需改用 GitLab Pages，按 `.gitlab-ci.yml` 形式自行配置。
 
 ## 开发说明
 
