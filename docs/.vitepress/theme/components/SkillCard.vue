@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from "vue";
+import { withBase } from "vitepress";
 
 const props = defineProps({
   skill: { type: Object, required: true },
@@ -30,7 +31,8 @@ const categoryLabel = computed(() => CATEGORY_NAMES[props.skill.category] || pro
 const ownerBadge = computed(() => (props.skill.owner?.type === "migrated" ? "badge--migrated" : "badge--official"));
 const ownerLabel = computed(() => (props.skill.owner?.type === "migrated" ? "迁移" : "官方"));
 
-const detailLink = computed(() => `/skills/${props.skill.name}`);
+// withBase 适配子路径部署（base: "/skill-market/"），否则 /skills/xxx 会指向根路径 404
+const detailLink = computed(() => withBase(`/skills/${props.skill.name}`));
 </script>
 
 <template>
